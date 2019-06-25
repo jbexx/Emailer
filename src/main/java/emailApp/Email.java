@@ -1,7 +1,7 @@
 package emailApp;
 import java.util.Scanner;
 
-public final class Email {
+public class Email {
     private String firstName;
     private String lastName;
     private String password;
@@ -16,7 +16,6 @@ public final class Email {
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("Email Created:: " + this.firstName + ' ' + this.lastName);
         
         //call method asking for department from user, return department
         this.department = setDepartment();
@@ -70,4 +69,11 @@ public final class Email {
     public int getMailboxCapacity() { return mailboxCapacity; }
     public String getAltEmail() { return alternateEmail; }
     public String getPassword() { return password; }
+
+    public String showInfo() {
+        return ("Display Name: " + firstName + " " + lastName +
+                "\nComapny Email: " + email + " " +
+                "\nMailbox Capacity: " + mailboxCapacity + "mb");
+
+    }
 }
